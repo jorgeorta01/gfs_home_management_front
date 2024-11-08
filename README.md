@@ -1,5 +1,5 @@
-# hello_world_react
-My own journey with react
+# Home Management Front End
+This is a front-end application for the home management dashboard. 
 
 # Runtime environment that allows you to run JavaScript outside the browser.
 npm install node
