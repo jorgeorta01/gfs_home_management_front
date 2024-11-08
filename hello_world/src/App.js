@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState('Edit src/App.js and save to reload.');
 
   const handleClick = () => {
-    setMessage('Loading Hello World....');
+    setMessage('Hello World!');
   };
 
 
@@ -16,8 +16,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
+        {/*Place message here  */}
         <p>
-          {message}
+          {message} 
         </p>
 
         <a
@@ -28,9 +29,12 @@ function App() {
         >
           Learn React
         </a>
+        
         <a>
         <button onClick={handleClick}>Continue to Hello World</button>
         </a>
+
+
       </header>
 
     </div>
