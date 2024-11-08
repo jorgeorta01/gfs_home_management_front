@@ -1,14 +1,25 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [message, setMessage] = useState('Edit src/App.js and save to reload.');
+
+  const handleClick = () => {
+    setMessage('Loading Hello World....');
+  };
+
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {message}
         </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -17,7 +28,11 @@ function App() {
         >
           Learn React
         </a>
+        <a>
+        <button onClick={handleClick}>Continue to Hello World</button>
+        </a>
       </header>
+
     </div>
   );
 }
