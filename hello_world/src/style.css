@@ -1,47 +1,59 @@
 .dashboard {
     background-color: #f4f5f6;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 1920px;
 }
 
 .dashboard .overlap-wrapper {
     background-color: #f4f5f6;
-    height: 1024px;
-    width: 1920px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 1920px;
+    max-height:1024px;
 }
 
 .dashboard .overlap {
-    height: 1020px;
+    height: 100vh;
     position: relative;
+    width: 100vw;
+    max-width: 1920px;
+    max-height: 1020px;
+
 }
 
 .dashboard .overlap-group {
-    height: 1020px;
+    height: 100vh;
     left: 0;
     position: absolute;
     top: 0;
-    width: 1920px;
+    width: 100vw;
+    max-width: 1920px;
+    max-height: 1020px;
 }
 
 .dashboard .rectangle {
     background-color: #ffffff;
     box-shadow: 0px 0px 10px #0000001a;
-    height: 100px;
+    height: 100vh;
     left: 0;
     position: absolute;
     top: 0;
-    width: 1920px;
+    width: 100vw;
+    max-width: 1920px;
+    max-height: 100px;
 }
 
 .dashboard .div {
     background-color: #ffffff;
-    height: 100px;
+    height: 100vh;
     left: 0;
     position: absolute;
     top: 103px;
-    width: 1920px;
+    width: 100vw;
+    max-width: 1920px;
+    max-height: 100px;
 }
 
 .dashboard .rectangle-2 {
@@ -250,11 +262,14 @@
 }
 
 .dashboard .profile {
-    height: 50px;
-    left: 1737px;
+    height: 100vh;
+    left: 1560px;
     position: absolute;
     top: 25px;
-    width: 151px;
+    width: 100vh;
+    max-width: 151px;
+    max-height: 50px;
+    
 }
 
 .dashboard .text-wrapper-6 {
@@ -297,6 +312,7 @@
     position: absolute;
     top: 244px;
     width: 364px;
+    
 }
 
 .dashboard .overlap-group-2 {
@@ -305,6 +321,7 @@
     height: 127px;
     position: relative;
     width: 360px;
+
 }
 
 .dashboard .text-wrapper-8 {
@@ -338,7 +355,7 @@
     left: 730px;
     position: absolute;
     top: 244px;
-    width: 364px;
+    width: 360px;
 }
 
 .dashboard .overlap-3 {
@@ -347,6 +364,7 @@
     height: 127px;
     position: relative;
     width: 360px;
+
 }
 
 .dashboard .text-wrapper-10 {
@@ -380,7 +398,7 @@
     left: 1120px;
     position: absolute;
     top: 244px;
-    width: 364px;
+    width: 360px;
 }
 
 .dashboard .group-3 {
@@ -388,7 +406,7 @@
     left: 1510px;
     position: absolute;
     top: 244px;
-    width: 364px;
+    width: 360px;
 }
 
 .dashboard .text-wrapper-12 {
