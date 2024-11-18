@@ -1,9 +1,12 @@
 .dashboard {
     background-color: #f4f5f6;
     /* display: flex; */
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
-    width: 1920px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+    max-height: 1020px;
 }
 
 .dashboard .overlap-wrapper {
@@ -11,12 +14,12 @@
     height: 100vh;
     width: 100vw;
     max-width: 1920px;
-    max-height:1024px;
+    max-height:1020px;
 }
 
 .dashboard .overlap {
     height: 100vh;
-    position: relative;
+    /* position: relative; */
     width: 100vw;
     max-width: 1920px;
     max-height: 1020px;
