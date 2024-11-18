@@ -11,6 +11,7 @@ export const App = () => {
     return (
         <div className="dashboard">
             <div className="overlap-wrapper">
+                
                 <div className="overlap">
                     <div className="overlap-group">
                         <div className="rectangle" />
@@ -84,7 +85,7 @@ export const App = () => {
                             <img className="frame" alt="Frame" src={image} />
                         </div>
                     </div>
-
+                    {/* Total Property */}
                     <div className="total-property">
                         <div className="overlap-group-2">
                             <div className="text-wrapper-8">Total Property</div>
@@ -92,7 +93,7 @@ export const App = () => {
                             <div className="text-wrapper-9">45</div>
                         </div>
                     </div>
-
+                    {/* Total Unit */}
                     <div className="total-unit">
                         <div className="overlap-3">
                             <div className="text-wrapper-10">Total Unit</div>
@@ -100,7 +101,7 @@ export const App = () => {
                             <div className="text-wrapper-11">142</div>
                         </div>
                     </div>
-
+                    {/* Total Income */}
                     <div className="income">
                         <div className="overlap-3">
                             <div className="text-wrapper-10">Total Income</div>
@@ -108,7 +109,7 @@ export const App = () => {
                             <div className="text-wrapper-11">$56456.00</div>
                         </div>
                     </div>
-
+                    {/* Total Expenses */}
                     <div className="group-3">
                         <div className="overlap-3">
                             <div className="text-wrapper-10">Total Expense</div>
@@ -116,7 +117,7 @@ export const App = () => {
                             <div className="text-wrapper-12">$26456.00</div>
                         </div>
                     </div>
-
+                    {/* Payment History */}
                     <div className="overlap-4">
                         <div className="text-wrapper-13">Payment History</div>
 
@@ -148,7 +149,7 @@ export const App = () => {
                             <div className="text-wrapper-26">See Invoices</div>
                         </div>
                     </div>
-
+                    {/* Maintenence Status */}
                     <div className="overlap-5">
                         <div className="text-wrapper-27">Maintenance Status</div>
 

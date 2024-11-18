@@ -321,8 +321,7 @@
     height: 127px;
     position: relative;
     width: 360px;
-    max-width:;
-    max-height:;
+
 }
 
 .dashboard .text-wrapper-8 {
@@ -356,7 +355,7 @@
     left: 730px;
     position: absolute;
     top: 244px;
-    width: 320px;
+    width: 360px;
 }
 
 .dashboard .overlap-3 {
@@ -364,9 +363,8 @@
     border-radius: 8px;
     height: 127px;
     position: relative;
-    width: 320px;
-    max-width:;
-    max-height:;
+    width: 360px;
+
 }
 
 .dashboard .text-wrapper-10 {
@@ -400,7 +398,7 @@
     left: 1120px;
     position: absolute;
     top: 244px;
-    width: 320px;
+    width: 360px;
 }
 
 .dashboard .group-3 {
@@ -408,7 +406,7 @@
     left: 1510px;
     position: absolute;
     top: 244px;
-    width: 320px;
+    width: 360px;
 }
 
 .dashboard .text-wrapper-12 {
