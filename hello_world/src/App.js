@@ -1,45 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import frame from "./frame.svg";
 import group from "./GFS_LOGO.PNG";
-import image from "./image.svg";
 import line1 from "./line-1.svg";
-import line2 from "./line-2.svg";
-import line3 from "./line-3.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
 export const App = () => {
-    function handleButtonClick() {
-        console.log("Button clicked!");
+    const [activeButton, setActiveButton] = useState(null); // State to track the active button
+
+    function handleButtonClick(label) {
+        setActiveButton(label); // Set the clicked button as active
+        console.log(`${label} button clicked!`);
     }
 
     return (
         <div className="container-fluid dashboard">
             <div className="row">
                 {/* Left-side menu */}
-                <div className="col-md-2 p-0 bg-white shadow-sm">
-                    <div className="logo text-center py-3">
-                        <img src={group} alt="Logo" className="img-fluid" />
-                    </div>
-                    <ul className="nav flex-column">
-                        <li className="nav-item">
-                            <div className="nav-link text-center">Dashboard</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link text-center">Properties</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link text-center">Tenants</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link text-center">Add Property</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link text-center">Maintainer</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link text-center">Contacts</div>
-                        </li>
+                <div className="col-md-2 p-0 bg-white shadow-sm d-flex flex-column align-items-center justify-content-center">
+                    <ul className="nav flex-column w-100 text-center">
+                        <div className="logo mb-4">
+                            <img src={group} alt="Logo" className="img-fluid" />
+                        </div>
+                        {["Dashboard", "Properties", "Tenants", "Add Property", "Maintainer", "Contacts"].map(
+                            (label) => (
+                                <li className="nav-item" key={label}>
+                                    <button
+                                        className={`btn btn-link nav-link ${
+                                            activeButton === label ? "active" : ""
+                                        }`}
+                                        onClick={() => handleButtonClick(label)}
+                                    >
+                                        {label}
+                                    </button>
+                                </li>
+                            )
+                        )}
                     </ul>
                 </div>
 
@@ -50,7 +46,6 @@ export const App = () => {
                             <span className="me-2">English</span>
                             <div>
                                 <img src={line1} alt="Line" className="me-1" />
-
                             </div>
                         </div>
                         <div className="d-flex align-items-center">
