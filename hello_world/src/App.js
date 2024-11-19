@@ -63,7 +63,7 @@ export const App = () => {
                             <div className="card bg-primary text-white text-center shadow">
                                 <div className="card-body">
                                     <h5>Total Properties</h5>
-                                    <h3>125</h3>
+                                    <h3>5</h3>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ export const App = () => {
                         <div className="col-lg-3 col-md-6 mb-3">
                             <div className="card bg-white text-dark text-center shadow">
                                 <div className="card-body">
-                                    <h5>Income</h5>
+                                    <h5>Total Income</h5>
                                     <h3>$15,000</h3>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ export const App = () => {
                         <div className="col-lg-3 col-md-6 mb-3">
                             <div className="card bg-white text-dark text-center shadow">
                                 <div className="card-body">
-                                    <h5>Maintainers</h5>
+                                    <h5>Total Expense</h5>
                                     <h3>25</h3>
                                 </div>
                             </div>
