@@ -1,98 +1,106 @@
 import React from "react";
 import frame from "./frame.svg";
-import group from "./group.png";
+import group from "./GFS_LOGO.PNG";
 import image from "./image.svg";
 import line1 from "./line-1.svg";
 import line2 from "./line-2.svg";
 import line3 from "./line-3.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
 export const App = () => {
+    function handleButtonClick() {
+        console.log("Button clicked!");
+    }
+
     return (
-        <div className="dashboard">
-            <div className="overlap-wrapper">
-                
-                <div className="overlap">
-                    <div className="overlap-group">
-                        {/* Chosen Language and user */}
-                        <div className="rectangle" />
-                        {/* Title of current menu-tab */}
-                        <div className="div" />
-                        {/* Left-side column with different menu-tabs */}
-                        <div className="rectangle-2">
-                            <div className="property">
-                                <div className="div-wrapper">
-                                    <div className="text-wrapper-3">Properties</div>
-                                </div>
-                            </div>
+        <div className="container-fluid dashboard">
+            <div className="row">
+                {/* Left-side menu */}
+                <div className="col-md-2 p-0 bg-white shadow-sm">
+                    <div className="logo text-center py-3">
+                        <img src={group} alt="Logo" className="img-fluid" />
+                    </div>
+                    <ul className="nav flex-column">
+                        <li className="nav-item">
+                            <div className="nav-link text-center">Dashboard</div>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link text-center">Properties</div>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link text-center">Tenants</div>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link text-center">Add Property</div>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link text-center">Maintainer</div>
+                        </li>
+                        <li className="nav-item">
+                            <div className="nav-link text-center">Contacts</div>
+                        </li>
+                    </ul>
+                </div>
 
-                            <div className="add-property">
-                                <div className="div-wrapper">
-                                    <div className="text-wrapper-3">Add Property</div>
-                                </div>
-                            </div>
+                {/* Main content */}
+                <div className="col-md-10">
+                    <header className="d-flex align-items-center justify-content-between bg-white shadow-sm p-3">
+                        <div className="d-flex align-items-center">
+                            <span className="me-2">English</span>
+                            <div>
+                                <img src={line1} alt="Line" className="me-1" />
 
-                            <div className="tenants">
-                                <div className="div-wrapper">
-                                    <div className="text-wrapper-3">Tenants</div>
-                                </div>
-                            </div>
-
-                            <div className="mainaiter">
-                                <div className="div-wrapper">
-                                    <div className="text-wrapper-3">Maintainer</div>
-                                </div>
-                            </div>
-
-                            <div className="contacs">
-                                <div className="div-wrapper">
-                                    <div className="text-wrapper-3">Contacts</div>
-                                </div>
-                            </div>
-
-                            <div className="overlap-group-wrapper">
-                                <div className="overlap-2">
-                                    <div className="text-wrapper-4">Dashboard</div>
-                                </div>
-                            </div>          
-                        {/* Upper-left corner logo */}
-                        <div className="logo">
-                            <div className="group">
-                                <div className="text-wrapper">TMS</div>
-
-                                <img className="img" alt="Group" src={group} />
                             </div>
                         </div>
-                  
+                        <div className="d-flex align-items-center">
+                            <img src={frame} alt="User" className="rounded-circle me-2" />
+                            <div>
+                                <div>user_2020</div>
+                                <div>TID: 23545</div>
+                            </div>
                         </div>
+                    </header>
 
-
-                        <div className="ellipse" />
-
-                        <div className="text-wrapper-5">English</div>
-
-                        <div className="group-2">
-                            <img className="line" alt="Line" src={line1} />
-
-                            <img className="line-2" alt="Line" src={line2} />
-
-                            <img className="line-3" alt="Line" src={line3} />
+                    {/* Example Dashboard Content */}
+                    <div className="row mt-4">
+                        <div className="col-lg-3 col-md-6 mb-3">
+                            <div className="card bg-primary text-white text-center shadow">
+                                <div className="card-body">
+                                    <h5>Total Properties</h5>
+                                    <h3>125</h3>
+                                </div>
+                            </div>
                         </div>
-
-                        <div className="profile">
-                            <div className="text-wrapper-6">user_2020</div>
-
-                            <div className="text-wrapper-7">TID: 23545</div>
-
-                            <img className="frame" alt="Frame" src={image} />
+                        <div className="col-lg-3 col-md-6 mb-3">
+                            <div className="card bg-white text-dark text-center shadow">
+                                <div className="card-body">
+                                    <h5>Total Units</h5>
+                                    <h3>450</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 mb-3">
+                            <div className="card bg-white text-dark text-center shadow">
+                                <div className="card-body">
+                                    <h5>Income</h5>
+                                    <h3>$15,000</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 mb-3">
+                            <div className="card bg-white text-dark text-center shadow">
+                                <div className="card-body">
+                                    <h5>Maintainers</h5>
+                                    <h3>25</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     );
 };
-
 
 export default App;
