@@ -5,6 +5,74 @@ import line1 from "./line-1.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
+export const paintColors = [
+  {
+    id: 1,
+    brand: "Sherwin-Williams",
+    colorName: "Naval",
+    colorCode: "SW 6244",
+    finish: "Matte"
+  },
+  {
+    id: 2,
+    brand: "Benjamin Moore",
+    colorName: "Hale Navy",
+    colorCode: "HC-154",
+    finish: "Eggshell"
+  },
+  {
+    id: 3,
+    brand: "Behr",
+    colorName: "Midnight Blue",
+    colorCode: "PPU14-20",
+    finish: "Satin"
+  },
+  {
+    id: 4,
+    brand: "Farrow & Ball",
+    colorName: "Hague Blue",
+    colorCode: "No.30",
+    finish: "Semi-Gloss"
+  }
+];
+
+export const appliances = [
+  {
+    id: 1,
+    category: "Refrigerator",
+    brand: "Samsung",
+    modelNumber: "RF28R7551SR",
+    price: 2799.99,
+    color: "Stainless Steel"
+  },
+  {
+    id: 2,
+    category: "Dishwasher",
+    brand: "Bosch",
+    modelNumber: "SHPM88Z75N",
+    price: 1299.99,
+    color: "Black Stainless"
+  },
+  {
+    id: 3,
+    category: "Range",
+    brand: "LG",
+    modelNumber: "LSE4616ST",
+    price: 1899.99,
+    color: "Stainless Steel"
+  },
+  {
+    id: 4,
+    category: "Microwave",
+    brand: "Whirlpool",
+    modelNumber: "WMH31017HS",
+    price: 399.99,
+    color: "Stainless Steel"
+  }
+];
+
+
+
 export const App = () => {
     const [activeButton, setActiveButton] = useState(null); // State to track the active button
 
@@ -70,7 +138,7 @@ export const App = () => {
                         <div className="col-lg-3 col-md-6 mb-3">
                             <div className="card bg-white text-dark text-center shadow">
                                 <div className="card-body">
-                                    <h5>Total Units</h5>
+                                    <h5>Total Appliances</h5>
                                     <h3>450</h3>
                                 </div>
                             </div>
