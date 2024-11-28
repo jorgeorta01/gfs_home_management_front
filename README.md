@@ -10,5 +10,8 @@ npx create-react-app hello_world
 # Ensure you are in the right directory
 cd hello_world
 
+# Install dependencies
+npm i
+
 # Starting the app itself
 npm run start
