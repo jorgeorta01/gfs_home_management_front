@@ -87,12 +87,12 @@ export const App = () => {
                 {/* Left-side menu */}
                 <div className="col-md-2 p-0 bg-white shadow-sm d-flex flex-column align-items-center justify-content-center">
                     <ul className="nav flex-column w-100 text-center">
-                        <div className="logo mb-4">
+                        <div className="logo mt-4 mb-4">
                             <img src={group} alt="Logo" className="img-fluid" />
                         </div>
                         {["Dashboard", "Properties", "Tenants", "Add Property", "Maintainer", "Contacts"].map(
                             (label) => (
-                                <li className="nav-item" key={label}>
+                                <li className="nav-item " key={label}>
                                     <button
                                         className={`btn btn-link nav-link ${
                                             activeButton === label ? "active" : ""
@@ -125,45 +125,6 @@ export const App = () => {
                         </div>
                     </header>
 
-                    {/* Example Dashboard Content */}
-                    <div className="row mt-4">
-                        <div className="col-lg-3 col-md-6 mb-3">
-                            <div className="card bg-primary text-white text-center shadow">
-                                <div className="card-body">
-                                    <h5>Total Properties</h5>
-                                    <h3>5</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 mb-3">
-                            <div className="card bg-white text-dark text-center shadow">
-                                <div className="card-body">
-                                    <h5>Total Appliances</h5>
-                                    <h3>450</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 mb-3">
-                            <div className="card bg-white text-dark text-center shadow">
-                                <div className="card-body">
-                                    <h5>Total Income</h5>
-                                    <h3>$15,000</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 mb-3">
-                            <div className="card bg-white text-dark text-center shadow">
-                                <div className="card-body">
-                                    <h5>Total Expense</h5>
-                                    <h3>25</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    
                 </div>
             </div>
         </div>
