@@ -207,3 +207,24 @@ html, body {
     overflow-y: auto;
     padding: 20px;
 }
+
+.dashboard {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard .row {
+  height: 100%;
+  margin: 0;  /* Remove default row margin */
+}
+
+.dashboard .col-md-2,
+.dashboard .col-md-10 {
+  height: 100%;
+  padding: 0;  /* Remove default column padding */
+}
+
+/* Adjust the main content column's overflow */
+.dashboard .col-md-10 {
+  overflow-y: auto;
+}
