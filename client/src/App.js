@@ -5,81 +5,41 @@ import line1 from "./line-1.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
-export const paintColors = [
-  {
-    id: 1,
-    brand: "Sherwin-Williams",
-    colorName: "Naval",
-    colorCode: "SW 6244",
-    finish: "Matte"
-  },
-  {
-    id: 2,
-    brand: "Benjamin Moore",
-    colorName: "Hale Navy",
-    colorCode: "HC-154",
-    finish: "Eggshell"
-  },
-  {
-    id: 3,
-    brand: "Behr",
-    colorName: "Midnight Blue",
-    colorCode: "PPU14-20",
-    finish: "Satin"
-  },
-  {
-    id: 4,
-    brand: "Farrow & Ball",
-    colorName: "Hague Blue",
-    colorCode: "No.30",
-    finish: "Semi-Gloss"
-  }
-];
-
-export const appliances = [
-  {
-    id: 1,
-    category: "Refrigerator",
-    brand: "Samsung",
-    modelNumber: "RF28R7551SR",
-    price: 2799.99,
-    color: "Stainless Steel"
-  },
-  {
-    id: 2,
-    category: "Dishwasher",
-    brand: "Bosch",
-    modelNumber: "SHPM88Z75N",
-    price: 1299.99,
-    color: "Black Stainless"
-  },
-  {
-    id: 3,
-    category: "Range",
-    brand: "LG",
-    modelNumber: "LSE4616ST",
-    price: 1899.99,
-    color: "Stainless Steel"
-  },
-  {
-    id: 4,
-    category: "Microwave",
-    brand: "Whirlpool",
-    modelNumber: "WMH31017HS",
-    price: 399.99,
-    color: "Stainless Steel"
-  }
-];
-
-
+// Define separate components for each section
+const DashboardContent = () => <h1 className="title">Dashboard</h1>;
+const PropertiesContent = () => <h1 className="title">Properties</h1>;
+const TenantsContent = () => <h1 className="title">Tenants</h1>;
+const AddPropertyContent = () => <h1 className="title">Add Property</h1>;
+const MaintainerContent = () => <h1 className="title">Maintainer</h1>;
+const ContactsContent = () => <h1 className="title">Contacts</h1>;
 
 export const App = () => {
-    const [activeButton, setActiveButton] = useState(null); // State to track the active button
+    const [activeButton, setActiveButton] = useState(null);
 
     function handleButtonClick(label) {
-        setActiveButton(label); // Set the clicked button as active
+        setActiveButton(label);
         console.log(`${label} button clicked!`);
     }
+
+    // Function to render content based on active button
+    const renderContent = () => {
+        switch (activeButton) {
+            case 'Dashboard':
+                return <h1>Dashboard</h1>;
+            case 'Properties':
+                return <h1>Properties</h1>;
+            case 'Tenants':
+                return <h1>Tenants</h1>;
+            case 'Add Property':
+                return <h1>Add Property</h1>;
+            case 'Maintainer':
+                return <h1>Maintainer</h1>;
+            case 'Contacts':
+                return <h1>Contacts</h1>;
+            default:
+                return <h1>Dashboard</h1>; // Default view
+        }
+    };
 
     return (
         <div className="container-fluid dashboard">
@@ -124,11 +84,16 @@ export const App = () => {
                             </div>
                         </div>
                     </header>
-
+                    
+                    {/* Add the content area */}
+                    <div className="p-3">
+                        {renderContent()}
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
+
 
 export default App;
