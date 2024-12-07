@@ -10,7 +10,7 @@ PORT=8080;
 let db;
 (async () => {
 	db = await open({
-		// filename: 'friends.sqlite',   example example example example
+		// filename: '_______.sqlite',   example example example example
 		driver: sqlite3.Database
 	});
 })();
@@ -20,8 +20,8 @@ app.use(express.static(path.join(__dirname, 'static')));
 app.use(express.json());
 app.use(cors());
 
-app.get ("/friends", async (req, res) => {
-	const result = await db.all ("SELECT * FROM friend");
+app.get ("/_______", async (req, res) => {
+	const result = await db.all ("SELECT * FROM _______");
 	res.json(result);
 })
 

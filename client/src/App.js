@@ -7,29 +7,53 @@ import "./style.css";
 
 
 const DashboardContent = () => <h1 className="title">Dashboard</h1>;
-const PropertiesContent = () => (
-    <div>
-        <h1 className="title">Properties</h1>
-        <table className="table table-striped">
-            <thead>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Column 3</th>
-                    <th>Column 4</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                    <td>Data 4</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-);
+const PropertiesContent = () => {
+    // Simulated fake database call
+    const properties = [
+        {
+            name: "Townhouse",
+            appliances: 5,
+            materials: 14,
+            status: "Under Maintenance",
+            dateStarted: "2023-01-01"
+        },
+        {
+            name: "Condo",
+            appliances: 7,
+            materials: 23,
+            status: "Active",
+            dateStarted: "2023-01-01"
+        }
+    ];
+
+    return (
+        <div>
+            <h1 className="title">Properties</h1>
+            <table className="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Appliances</th>
+                        <th>Materials</th>
+                        <th>Status</th>
+                        <th>Date Started</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {properties.map((property, index) => (
+                        <tr key={index}>
+                            <td>{property.name}</td>
+                            <td>{property.appliances}</td>
+                            <td>{property.materials}</td>
+                            <td>{property.status}</td>
+                            <td>{property.dateStarted}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
 const TenantsContent = () => <h1 className="title">Tenants</h1>;
 const AddPropertyContent = () => <h1 className="title">Add Property</h1>;
 const MaintainerContent = () => <h1 className="title">Maintainer</h1>;
@@ -46,19 +70,30 @@ export const App = () => {
     const renderContent = () => {
         switch (activeButton) {
             case 'Dashboard':
-                return <h1>Dashboard</h1>;
+                return <DashboardContent/>;
             case 'Properties':
-                return <PropertiesContent />;
+                return (
+                    <>
+                        <h1>Properties</h1>,
+                        <PropertiesContent/> 
+                    </>
+                );
+   
             case 'Tenants':
-                return <h1>Tenants</h1>;
+                return <TenantsContent/>;
             case 'Add Property':
-                return <h1>Add Property</h1>;
+                return <AddPropertyContent/>;
             case 'Maintainer':
-                return <h1>Maintainer</h1>;
+                return <MaintainerContent/>;
             case 'Contacts':
-                return <h1>Contacts</h1>;
+                return (
+                    <>
+                        <h1>Contacts</h1>
+                        <ContactsContent />
+                    </>
+                );
             default:
-                return <h1>Dashboard</h1>; 
+                return <DashboardContent/>; 
         }
     };
 
