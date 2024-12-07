@@ -178,26 +178,27 @@ html, body {
 
   .nav-item {
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 .nav-item .btn-link {
     width: 100%;
-    text-align: center;
-    color: #000000;  /* This matches your existing sidenav text color */
+    text-align: left;
+    padding: 20px 20px;
+    color: #000000;
     text-decoration: none;
-    padding: 20px 0;
     border-radius: 0%;
+    font-size: 16px;
 }
 
 .nav-item .btn-link:hover {
-    background-color: rgba(27, 106, 203, 0.622);  /* This matches your existing hover effect */
+    background-color: rgba(27, 106, 203, 0.622);
     color: #ffffff;
     border-radius: 0%;
 }
 
 .nav-item .btn-link.active {
-    background-color: rgb(27, 105, 203);  /* Style for active button */
+    background-color: rgb(27, 105, 203);
     color: #ffffff;
     border-radius: 0%;
 }
@@ -227,4 +228,9 @@ html, body {
 /* Adjust the main content column's overflow */
 .dashboard .col-md-10 {
   overflow-y: auto;
+}
+
+.logo img {
+    max-width: 200px;  /* Adjust this value to your preferred size */
+    height: auto;
 }
