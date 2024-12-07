@@ -111,7 +111,7 @@ export const App = () => {
                 <div className="col-md-10">
                     <header className="d-flex align-items-center justify-content-between bg-white shadow-sm p-3">
                         <div className="d-flex align-items-center">
-                            <span className="me-2">English</span>
+                            <span className="me-2 header-text">English</span>
                             <div>
                                 <img src={line1} alt="Line" className="me-1" />
                             </div>
@@ -119,8 +119,8 @@ export const App = () => {
                         <div className="d-flex align-items-center">
                             <img src={frame} alt="User" className="rounded-circle me-2" />
                             <div>
-                                <div>user_2020</div>
-                                <div>TID: 23545</div>
+                                <div className="header-text">user_2020</div>
+                                <div className="header-text">TID: 23545</div>
                             </div>
                         </div>
                     </header>

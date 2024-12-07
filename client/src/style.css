@@ -14,7 +14,7 @@ html, body {
   /* General styles */
   body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgba(243, 248, 255, 0.622);
     height: 100vh;
   }
   
@@ -184,23 +184,27 @@ html, body {
 .nav-item .btn-link {
     width: 100%;
     text-align: left;
-    padding: 20px 20px;
+    padding: 25px 45px 25px;
     color: #000000;
-    text-decoration: none;
     border-radius: 0%;
     font-size: 16px;
+    
 }
 
 .nav-item .btn-link:hover {
-    background-color: rgba(27, 106, 203, 0.622);
-    color: #ffffff;
+    background-color: rgba(243, 248, 255, 0.622);
+    color: rgb(27, 105, 203);
     border-radius: 0%;
 }
 
 .nav-item .btn-link.active {
-    background-color: rgb(27, 105, 203);
-    color: #ffffff;
+
+    color: rgb(27, 105, 203);
     border-radius: 0%;
+}
+
+.header-text {
+  font-size: 16px;
 }
 
 .main {
@@ -230,7 +234,20 @@ html, body {
   overflow-y: auto;
 }
 
+.logo {
+    width: 100%;
+    padding: 0 20px;  /* Add padding to match nav items */
+    overflow: hidden;  /* Prevent overflow */
+}
+
 .logo img {
-    max-width: 200px;  /* Adjust this value to your preferred size */
+    width: 200px;  /* Fixed width for the image */
     height: auto;
+    display: block;
+    margin: 0 auto;  /* Center the image */
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
