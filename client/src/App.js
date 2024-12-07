@@ -5,9 +5,31 @@ import line1 from "./line-1.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
-// Define separate components for each section
+
 const DashboardContent = () => <h1 className="title">Dashboard</h1>;
-const PropertiesContent = () => <h1 className="title">Properties</h1>;
+const PropertiesContent = () => (
+    <div>
+        <h1 className="title">Properties</h1>
+        <table className="table table-striped">
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th>Column 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+);
 const TenantsContent = () => <h1 className="title">Tenants</h1>;
 const AddPropertyContent = () => <h1 className="title">Add Property</h1>;
 const MaintainerContent = () => <h1 className="title">Maintainer</h1>;
@@ -21,13 +43,12 @@ export const App = () => {
         console.log(`${label} button clicked!`);
     }
 
-    // Function to render content based on active button
     const renderContent = () => {
         switch (activeButton) {
             case 'Dashboard':
                 return <h1>Dashboard</h1>;
             case 'Properties':
-                return <h1>Properties</h1>;
+                return <PropertiesContent />;
             case 'Tenants':
                 return <h1>Tenants</h1>;
             case 'Add Property':
@@ -37,7 +58,7 @@ export const App = () => {
             case 'Contacts':
                 return <h1>Contacts</h1>;
             default:
-                return <h1>Dashboard</h1>; // Default view
+                return <h1>Dashboard</h1>; 
         }
     };
 
@@ -85,7 +106,7 @@ export const App = () => {
                         </div>
                     </header>
                     
-                    {/* Add the content area */}
+                    {/* Conditional Rendering/ Content */}
                     <div className="p-3">
                         {renderContent()}
                     </div>
