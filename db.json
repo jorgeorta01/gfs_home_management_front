@@ -1,0 +1,7 @@
+{
+    "posts": [
+        {"id":1,"title": "Hello World",
+    "content":"This is my first post!"},
+    {"id":2, "title":"Learning React", "content":"React is powerful!"}
+    ]
+}
