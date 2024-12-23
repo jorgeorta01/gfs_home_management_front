@@ -1,7 +1,25 @@
 {
     "posts": [
-        {"id":1,"title": "Hello World",
-    "content":"This is my first post!"},
-    {"id":2, "title":"Learning React", "content":"React is powerful!"}
+        {"id":"1","title": "Hello World","content":"This is my first post!"},
+        {"id":"2", "title":"Learning React", "content":"React is powerful!"}
+    ],
+
+    "properties": [
+        {
+            "id": "1",
+            "name": "Beach House",
+            "appliances": 5,
+            "materials": 14,
+            "status": "Under Maintenance",
+            "dateStarted": "2023-01-01"
+        },
+        {
+            "id":"2",
+            "name": "Lake House",
+            "appliances": 7,
+            "materials": 23,
+            "status": "Active",
+            "dateStarted": "2023-01-01"
+        }
     ]
 }

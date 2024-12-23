@@ -1,30 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import frame from "./frame.svg";
 import group from "./GFS_LOGO.PNG";
 import line1 from "./line-1.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
+import axios from "axios";
 
 
 const DashboardContent = () => <h1 className="title">Dashboard</h1>;
+
 const PropertiesContent = () => {
-    // Simulated fake database call
-    const properties = [
-        {
-            name: "Townhouse",
-            appliances: 5,
-            materials: 14,
-            status: "Under Maintenance",
-            dateStarted: "2023-01-01"
-        },
-        {
-            name: "Condo",
-            appliances: 7,
-            materials: 23,
-            status: "Active",
-            dateStarted: "2023-01-01"
+    const [properties, setProperties] = useState([]);
+
+    const fetchProperties = async () => {
+        try {
+            const response = await axios.get('http://localhost:5000/properties');
+            setProperties(response.data);
+        } catch (error) {
+            console.error('Error fetching properties:', error);
         }
-    ];
+    };
+
+    useEffect(() => {
+        fetchProperties();
+    }, []);
 
     return (
         <div>
@@ -62,10 +61,12 @@ const ContactsContent = () => <h1 className="title">Contacts</h1>;
 export const App = () => {
     const [activeButton, setActiveButton] = useState(null);
 
+
     function handleButtonClick(label) {
         setActiveButton(label);
         console.log(`${label} button clicked!`);
     }
+
 
     const renderContent = () => {
         switch (activeButton) {
